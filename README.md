@@ -1,7 +1,7 @@
 # FireWall-Projects
 Illumio Challenge 
 
-# ILUMIO CODING CHALLENGE:
+# ILLUMIO CODING CHALLENGE:
 
 Name: Anh Nguyen
 Firewall Packet Classification Project
