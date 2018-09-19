@@ -17,8 +17,8 @@ When I consider this problem, I noticed that (direction , protocol) only take up
 # More Optimization:
 
 I would want to use somewhat easier approach. I have thought of some data structure like Bloom Filter, Radix Trie but those data structure have following issues:
--Bloom Filter suffers from false positive issue and we need the bit array size to be quite big to handle FP.
--Radix Trie suffers from very high space complexity also.
+Bloom Filter suffers from false positive issue and we need the bit array size to be quite big to handle FP.
+Radix Trie suffers from very high space complexity also.
 As I mentioned, if given more time, I will develop a coordinate compression methods to compress the IP range down to [1 , n]
 
 # Teams:
