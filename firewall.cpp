@@ -20,7 +20,7 @@ vector<SegmentX>SegX2;
 vector<SegmentX>SegX3;
 vector<SegmentX>SegX4;
 
-vector<pair<SegmentY , int>>SegY1;
+vector<pair<SegmentY , int>>SegY1; 
 vector<pair<SegmentY , int>>SegY2;
 vector<pair<SegmentY , int>>SegY3;
 vector<pair<SegmentY , int>>SegY4;
@@ -136,7 +136,7 @@ public:
 	unsigned long int ipToLong(string IPAddress);
 	void preprocess(string filename);
 	void buildSegTree();
-	bool accept_packet(string direction , string protocol , string port , string IP);
+	bool accept_package(string direction , string protocol , string port , string IP);
 };
 
 unsigned long int FireWall::iptoLong(string IPAddress){
@@ -233,14 +233,14 @@ void FireWall::buildSegTree(){
 		buildTreeX(XTree2 ,  SegY2 , SegX2 , 1 , 1 , M , i);
 	}
 	for(int i = 0 ; i < SegX3.size() ; i++){
-		buildTreeX(XTree3 , SegX3 , SegY3 , 1 , 1 , M , i);
+		buildTreeX(XTree3 , SegY3 , SegX3 , 1 , 1 , M , i);
 	}
 	for(int i = 0 ; i < SegX4.size() ; i++){
-		buildTreeX(XTree4 , SegX4 , SegY4 , 1 , 1 , M , i);
+		buildTreeX(XTree4 , SegY4 , SegX4 , 1 , 1 , M , i);
 	}
 }
 
-bool FireWall::accept_packet(string direction , string protocol , string port , string IP){
+bool FireWall::accept_package(string direction , string protocol , string port , string IP){
 	int Port = stoi(protocol);
 	unsigned long int Ip = iptoLong(IP);
 	pair<int , unsigned long int>points = make_pair(Port , Ip);
