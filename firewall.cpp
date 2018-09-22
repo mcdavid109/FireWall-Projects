@@ -102,6 +102,7 @@ bool QueryX(struct XSegTree XTree[] , int node , int left , int right , pair<int
 			res = QueryX(XTree , node * 2 + 1 , middle + 1 , right , points);
 		}
 	}
+	return res;
 }
 //query in y-segment tree
 bool QueryY(struct YSegTree YTree[] , int node, int left , int right , pair<int , unsigned long int> &points){
