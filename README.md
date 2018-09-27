@@ -22,8 +22,9 @@ Radix Trie suffers from very high space complexity also.
 As I mentioned, if given more time, I will develop a coordinate compression methods to compress the IP range down to [1 , n]
 
 # Update:
-I think coordinate compression for this problem is not practical because we cannot compress the query down to the range we specified. But I have already invented a dynamic allocation version of segment tree that can help it deals with the problem of space complexity. Idea: Only update if needed. The link to the toy data structure can be found here: 
+I think coordinate compression for this problem is not practical because we cannot compress the query down to the range we specified. But I have already invented a dynamic allocation version of segment tree that can help it deals with the problem of big range. Idea: Only update if needed. The link to the toy data structure can be found here: 
 https://pastebin.com/DfASNYHg
+Maybe fractional cascading can bring look up cost down to O(logn)
 
 # Teams:
 
